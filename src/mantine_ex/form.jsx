@@ -58,7 +58,7 @@ export const Form = () => {
     return success.map((item, index) => (
       <Table.Tr
         key={index}
-        className="transition-all duration-300 ease-in-out hover:bg-zinc-300 hover:scale-105 dark:hover:bg-zinc-700"
+        className="transition-transform duration-300 ease-in-out hover:bg-zinc-300 hover:scale-105 dark:hover:bg-zinc-700"
       >
         <Table.Td>{item.name}</Table.Td>
         <Table.Td>{item.email}</Table.Td>
