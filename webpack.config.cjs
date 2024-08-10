@@ -10,6 +10,7 @@ module.exports = {
     table: "./src/table.jsx",
     mantine_ex: "./src/mantine_ex/tt.jsx",
     UI: "./src/UI/main.jsx",
+    test: "./src/test/main.jsx",
   },
 
   output: {
@@ -62,6 +63,11 @@ module.exports = {
       template: "./src/UI/index.html",
       chunks: ["UI"], // Specify the chunks for this HTML file
       filename: "UI/index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/test/index.html",
+      chunks: ["test"], // Specify the chunks for this HTML file
+      filename: "test/index.html",
     }),
   ],
   devServer: {

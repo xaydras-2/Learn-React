@@ -13,7 +13,7 @@ export const Header = ({ children }) => {
   return (
     <MantineProvider theme={{ colorScheme: darkMode ? "dark" : "light" }}>
       <div
-        data-mantine-color-scheme={darkMode ? "dark" : "light"}
+        data-color-scheme={darkMode ? "dark" : "light"}
         className={`min-h-screen ${
           darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
         } transition-all duration-300 ease-in-out`}

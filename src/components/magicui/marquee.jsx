@@ -1,3 +1,4 @@
+import React from 'react';
 import { cn } from "../../lib/utilities";
 
 export default function Marquee({
@@ -6,20 +7,21 @@ export default function Marquee({
   pauseOnHover = false,
   children,
   vertical = false,
-  repeat = 4,
+  repeat = 6,
   ...props
 }) {
   return (
-    (<div
+    <div
       {...props}
       className={cn(
-        "group flex overflow-hidden p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]",
+        "group flex overflow-hidden p-2 [--duration:7s] [--gap:1rem] [gap:var(--gap)]",
         {
           "flex-row": !vertical,
           "flex-col": vertical,
         },
         className
-      )}>
+      )}
+    >
       {Array(repeat)
         .fill(0)
         .map((_, i) => (
@@ -30,10 +32,11 @@ export default function Marquee({
               "animate-marquee-vertical flex-col": vertical,
               "group-hover:[animation-play-state:paused]": pauseOnHover,
               "[animation-direction:reverse]": reverse,
-            })}>
+            })}
+          >
             {children}
           </div>
         ))}
-    </div>)
+    </div>
   );
 }
